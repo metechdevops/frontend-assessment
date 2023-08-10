@@ -40,7 +40,7 @@ Submission
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
 
 
-###### Assessment Task Completed
+#Assessment Task Completed
 
 
 ## Project Setup
