@@ -8,12 +8,12 @@
         </div>
       </nav>
       <div class="tab-content" id="nav-tabContent">
-        <div v-for="(tab,contentIndex) in tabs" :class="[ contentIndex == 0 ? 'show active': '']" class="tab-pane fade" :id="tab.slug" role="tabpanel" :aria-labelledby="tab+'-tab'" :tabindex="index" v-html="tab.content"></div>
+        <div v-for="(tab,contentIndex) in tabs" :key="contentIndex+'tab'" :class="[ contentIndex == 0 ? 'show active': '']" class="tab-pane fade" :id="tab.slug" role="tabpanel" :aria-labelledby="tab+'-tab'" :tabindex="index" v-html="tab.content"></div>
       </div>
     </div>
 
     <div class="accordion mt-5" id="accordionExample">
-      <div v-for="(accordion,accordionIndex) in tabs" class="accordion-item">
+      <div v-for="(accordion,accordionIndex) in tabs" :key="accordionIndex+'acc'" class="accordion-item">
         <h2 class="accordion-header" :id="'heading-'+accordionIndex">
          <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="'#'+accordion.slug" :aria-expanded="[ accordionIndex == 0 ? true: false]" :aria-controls="accordion.slug">
             {{accordion.title}}
